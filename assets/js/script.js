@@ -1,18 +1,32 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const questions = [
-        {
-            question: "What does html stand for?",
-            options: ["Hyper Transfer Markup Language", "Hyperlinking Text Management Language", "Hyperlink and Text Markup Language", "Hyper Text Markup Language"],
-            correctAnswer: "Hyper Text Markup Language"
-        },
-        {
-            question: "What was Git named after, referring to British slang?",
-            options: ["Type of Car", "A silly person", "A small fish", "A quick movement"],
-            correctAnswer: "A silly person"
-        },
-        // ... rest of your questions ...
-    ];
-
+  const questions = [
+    {
+      question: "What does html stand for?",
+      options: ["Hyper Transfer Markup Language", "Hyperlinking Text Management Language", "Hyperlink and Text Markup Language", "Hyper Text Markup Language"],
+      correctAnswer: "Hyper Text Markup Language"
+    },
+    {
+      question: "What was Git named after, referring to British slang?",
+      options: ["Type of Car", "A silly person", "A small fish", "A quick movement"],
+      correctAnswer: "A silly person"
+    },
+    {
+      question: "What does CSS stand for?",
+      options: ["Computer Style Sheets", "Cascading Style Systems", "Cascading Sheet Styles", "Cascading Style Sheets"],
+      correctAnswer: "Cascading Style Sheets"
+    },
+    {
+      question: "What does API stand for?",
+      options: ["Application Programming Interface", "Application Programming Index", "Application Programming Internet", "Application Programming Integration"],
+      correctAnswer: "Application Programming Interface"
+    },
+    {
+      question: "What does DOM stand for?",
+      options: ["Document Object Model", "Document Object Management", "Document Object Manipulation", "Document Object Model"],
+      correctAnswer: "Document Object Model"  
+    }
+  ];
+});
     const startButton = document.getElementById("btn");
     const container = document.getElementById("container");
     const gameOverDiv = document.getElementById("game-over");
@@ -52,6 +66,8 @@ document.addEventListener("DOMContentLoaded", function() {
         alert("Time's up! Game Over!");
         container.style.display = "none";
         gameOverDiv.style.display = "block";
+        scoreSection.style.display = "block";
+
     }
 
     function showQuestion(questionIndex) {
