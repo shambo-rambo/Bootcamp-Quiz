@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const timeEl = document.getElementById("timer");
   const questionDiv = document.getElementById("question");
   const answerButtons = document.querySelectorAll(".a-btn");
+  const scoreSection = document.getElementById("score-section");
   
   let currentQuestionIndex = 0;
   let secondsLeft = 60;
@@ -41,6 +42,8 @@ document.addEventListener("DOMContentLoaded", function() {
   // Initially hide the quiz container and game over div
   container.style.display = "none";
   gameOverDiv.style.display = "none";
+  scoreSection.style.display = "none";
+
 
   startButton.addEventListener("click", function() {
     // Hide start button and show the quiz container
@@ -85,6 +88,7 @@ document.addEventListener("DOMContentLoaded", function() {
   function checkAnswer(selectedOption) {
     if (selectedOption === questions[currentQuestionIndex].correctAnswer) {
         alert("Correct!");
+        score += 10;
     } else {
         alert("Wrong!");
         secondsLeft -= 10;  // Subtract 10 seconds if the answer is wrong
@@ -101,3 +105,14 @@ document.addEventListener("DOMContentLoaded", function() {
         // Optional: reset the quiz or navigate to a results page
     }
   }
+
+  function saveScore(initials, score) {
+    // For simplicity, saving to local storage
+    const scores = JSON.parse(localStorage.getItem("scores")) || [];
+    scores.push({ initials, score });
+    localStorage.setItem("scores", JSON.stringify(scores));
+    
+    // Notify user & redirect or update UI as needed
+    alert("Score saved!");
+    window.location.href = "highscores.html";
+}
