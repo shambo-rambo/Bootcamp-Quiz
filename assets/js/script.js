@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const timeEl = document.getElementById("timer");
     const questionDiv = document.getElementById("question");
     const answerButtons = document.querySelectorAll(".a-btn");
-    const scoreSection = document.getElementById("score-section");
+    const scoreSection = document.getElementById("high-score");
 
     let currentQuestionIndex = 0;
     let secondsLeft = 60;
