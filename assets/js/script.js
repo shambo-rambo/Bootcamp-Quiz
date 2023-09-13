@@ -101,11 +101,12 @@ document.addEventListener("DOMContentLoaded", function() {
             if (secondsLeft < 0) secondsLeft = 0;
             timeEl.textContent = secondsLeft;
         }
+    
         currentQuestionIndex++;
         if (currentQuestionIndex < questions.length) {
             showQuestion(currentQuestionIndex);
         } else {
-            alert("Quiz Completed!");
+            endGame();
         }
     }
 
