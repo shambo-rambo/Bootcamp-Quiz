@@ -67,8 +67,13 @@ document.addEventListener("DOMContentLoaded", function() {
         container.style.display = "none";
         gameOverDiv.style.display = "block";
         scoreSection.style.display = "block";
-
+        
+        let initials = prompt("Enter your initials:");
+        if (initials) {
+            saveScore(initials, score);
+        }
     }
+
 
     function showQuestion(questionIndex) {
         questionDiv.innerHTML = `<p>${questions[questionIndex].question}</p>`;
