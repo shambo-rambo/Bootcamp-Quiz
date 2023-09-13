@@ -62,18 +62,24 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 1000);
     }
 
-    function endGame() {
-        alert("Time's up! Game Over!");
-        container.style.display = "none";
-        gameOverDiv.style.display = "block";
-        scoreSection.style.display = "block";
-        
-        let initials = prompt("Enter your initials:");
-        if (initials) {
-            saveScore(initials, score);
-        }
-    }
-
+  function endGame() {
+      container.style.display = "none";  // Hide the quiz container
+      gameOverDiv.style.display = "block";  // Show the game over div
+      scoreSection.style.display = "block"; // Show the score section
+  
+      // Display the final score
+      document.getElementById("final-score").textContent = score;
+  
+      // Set up the event listener for the submit button
+      document.getElementById("submit-score").addEventListener("click", function() {
+          const initials = document.getElementById("initials-input").value;
+          if (initials) {
+              saveScore(initials, score);
+          } else {
+              alert("Please enter your initials!");
+          }
+      });
+  }
 
     function showQuestion(questionIndex) {
         questionDiv.innerHTML = `<p>${questions[questionIndex].question}</p>`;
