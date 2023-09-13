@@ -1,4 +1,3 @@
-document.addEventListener("DOMContentLoaded", function() {
   const questions = [
     {
       question: "What does html stand for?",
@@ -26,7 +25,8 @@ document.addEventListener("DOMContentLoaded", function() {
       correctAnswer: "Document Object Model"  
     }
   ];
-});
+
+document.addEventListener("DOMContentLoaded", function() {
     const startButton = document.getElementById("btn");
     const container = document.getElementById("container");
     const gameOverDiv = document.getElementById("game-over");
