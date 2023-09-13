@@ -26,6 +26,8 @@ document.addEventListener("DOMContentLoaded", function() {
       correctAnswer: "Document Object Model"  
     }
   ];
+});
+
   const startButton = document.getElementById("btn");
   const container = document.getElementById("container");
   const gameOverDiv = document.getElementById("game-over");
@@ -82,18 +84,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function checkAnswer(selectedOption) {
     if (selectedOption === questions[currentQuestionIndex].correctAnswer) {
-      alert("Correct!");
+        alert("Correct!");
     } else {
-      alert("Wrong!");
+        alert("Wrong!");
+        secondsLeft -= 10;  // Subtract 10 seconds if the answer is wrong
+        if (secondsLeft < 0) secondsLeft = 0;  // Ensure time doesn't go into negative
+        timeEl.textContent = secondsLeft;  // Update the displayed time
     }
 
     // Move to the next question or end the quiz
     currentQuestionIndex++;
     if (currentQuestionIndex < questions.length) {
-      showQuestion(currentQuestionIndex);
+        showQuestion(currentQuestionIndex);
     } else {
-      alert("Quiz Completed!");
-      // Optional: reset the quiz or navigate to a results page
+        alert("Quiz Completed!");
+        // Optional: reset the quiz or navigate to a results page
     }
   }
-});
