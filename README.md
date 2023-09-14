@@ -37,4 +37,7 @@ Feedback & Contribution
 Feel free to fork this repository, contribute, or provide feedback on any issues or improvements.
 
 # ScreenShots
+![Screenshot of quiz questions](assets/Screenshots/Screenshot 2023-09-14 at 2.33.18 pm.png)
+![Screenshot of quiz response](Screenshot 2023-09-14 at 2.33.29 pm.png)
+
 
