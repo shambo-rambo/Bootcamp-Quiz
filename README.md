@@ -37,7 +37,8 @@ Feedback & Contribution
 Feel free to fork this repository, contribute, or provide feedback on any issues or improvements.
 
 # ScreenShots
-![Screenshot of quiz questions](assets/Screenshots/Screenshot 2023-09-14 at 2.33.18 pm.png)
-![Screenshot of quiz response](Screenshot 2023-09-14 at 2.33.29 pm.png)
+![Screenshot of quiz questions]([assets/Screenshots/Screenshot 2023-09-14 at 2.33.18 pm.png](https://github.com/shambo-rambo/Bootcamp-Quiz/blob/main/assets/Screenshots/Screenshot%202023-09-14%20at%202.33.18%20pm.png?raw=true)https://github.com/shambo-rambo/Bootcamp-Quiz/blob/main/assets/Screenshots/Screenshot%202023-09-14%20at%202.33.18%20pm.png?raw=true)
+
+![Screenshot of quiz response]([Screenshot 2023-09-14 at 2.33.29 pm.png](https://github.com/shambo-rambo/Bootcamp-Quiz/blob/main/assets/Screenshots/Screenshot%202023-09-14%20at%202.33.29%20pm.png?raw=true)https://github.com/shambo-rambo/Bootcamp-Quiz/blob/main/assets/Screenshots/Screenshot%202023-09-14%20at%202.33.29%20pm.png?raw=true)
 
 
