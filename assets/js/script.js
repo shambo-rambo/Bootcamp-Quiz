@@ -33,16 +33,24 @@ document.addEventListener("DOMContentLoaded", function() {
     const timeEl = document.getElementById("timer");
     const questionDiv = document.getElementById("question");
     const answerButtons = document.querySelectorAll(".a-btn");
-    const scoreSection = document.getElementById("high-score");
+    const scoreSection = document.getElementById("high-section");
 
     let currentQuestionIndex = 0;
     let secondsLeft = 60;
-    let score = 0;  // Initialize score
+    let score = 0;
 
-    // Initially hide the quiz container, game over div, and score section
     container.style.display = "none";
     gameOverDiv.style.display = "none";
     scoreSection.style.display = "none";
+
+    document.getElementById("submit-score").addEventListener("click", function() {
+        const initials = document.getElementById("initials-input").value;
+        if (initials) {
+            saveScore(initials, score);
+        } else {
+            alert("Please enter your initials!");
+        }
+    });
 
     startButton.addEventListener("click", function() {
         startButton.style.display = "none";
@@ -63,22 +71,10 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
   function endGame() {
-      container.style.display = "none";  // Hide the quiz container
-      gameOverDiv.style.display = "block";  // Show the game over div
-      scoreSection.style.display = "block"; // Show the score section
-  
-      // Display the final score
+      container.style.display = "none";  
+      gameOverDiv.style.display = "block";  
+      scoreSection.style.display = "block"; 
       document.getElementById("final-score").textContent = score;
-  
-      // Set up the event listener for the submit button
-      document.getElementById("submit-score").addEventListener("click", function() {
-          const initials = document.getElementById("initials-input").value;
-          if (initials) {
-              saveScore(initials, score);
-          } else {
-              alert("Please enter your initials!");
-          }
-      });
   }
 
     function showQuestion(questionIndex) {
